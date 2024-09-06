@@ -80,9 +80,9 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public OrderResponse updateOrderById(Long id, OrderRequest orderRequest) {
-        OrderResponse orderResponse =  getOrderById(id);
+         getOrderById(id);
         orderRepository.save(orderRequest.toEntity(id));
-        return orderResponse;
+        return getOrderById(id);
     }
 
     @Override
