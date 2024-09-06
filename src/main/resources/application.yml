@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: openFeign-homework
+server:
+  port: 8080
