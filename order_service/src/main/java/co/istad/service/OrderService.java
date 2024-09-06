@@ -4,14 +4,16 @@ import co.istad.model.Order;
 import co.istad.model.request.OrderRequest;
 import co.istad.model.response.OrderResponse;
 
+import java.util.List;
+
 public interface OrderService {
     OrderResponse createOrder(OrderRequest orderRequest);
 
-    Order getAllOrders();
+    List<OrderResponse> getAllOrders();
 
-    Order getOrderById(Long id);
+    OrderResponse getOrderById(Long id);
 
-    Order updateOrderById(Long id, OrderRequest orderRequest);
+    OrderResponse updateOrderById(Long id, OrderRequest orderRequest);
 
-    Order deleteOrderById(Long id);
+    void deleteOrderById(Long id);
 }

@@ -24,4 +24,8 @@ public class OrderRequest {
       return new Order(null,this.customerId, productIds, LocalDate.now());
     }
 
+    public Order toEntity(Long id){
+        return new Order(id,this.customerId, productIds, LocalDate.now());
+    }
+
 }
